@@ -1,1 +1,22 @@
-<paste log output from Kubernetes-mediated prediction, here>
+$ ./run_kubernetes.sh 
+pod/flask-app created
+NAMESPACE     NAME                               READY   STATUS              RESTARTS       AGE
+default       flask-app                          0/1     ContainerCreating   0              1s
+kube-system   coredns-565d847f94-pl2jg           1/1     Running             0              167m
+kube-system   etcd-minikube                      1/1     Running             0              167m
+kube-system   kube-apiserver-minikube            1/1     Running             0              167m
+kube-system   kube-controller-manager-minikube   1/1     Running             0              167m
+kube-system   kube-proxy-k7wrt                   1/1     Running             0              167m
+kube-system   kube-scheduler-minikube            1/1     Running             0              167m
+kube-system   storage-provisioner                1/1     Running             1 (166m ago)   167m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [    
+    20.35373177134412
+  ]
+}

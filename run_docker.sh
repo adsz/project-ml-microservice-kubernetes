@@ -4,7 +4,6 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-#docker build --tag=adsz/flask_app .
 docker build --tag=adsz/flask_app:project-ml-microservice-kubernetes .
 
 # Step 2: 
